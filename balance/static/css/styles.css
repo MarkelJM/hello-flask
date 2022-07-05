@@ -15,3 +15,31 @@ nav {
     line-height: 25px;
     padding-left: 25px;
 }
+
+main {
+    max-width: 800px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+table.paper {
+    width: 100%;
+
+}
+
+
+
+.titulo-tabla {
+    border-bottom: #3d3e75 1px solid;
+    text-align: left;
+}
+
+.numero {
+    text-align: right;
+}
+
+.pie-de-pagina {
+    margin-top: 40px;
+    padding: 20px;
+    border-top: solid 1px bisque;
+}

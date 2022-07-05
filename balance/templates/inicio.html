@@ -19,23 +19,25 @@
     <nav>
         Inicio | Nuevo
     </nav>
+    <main>
 
-    <table class="paper">
-        <tr>
-            <th>Fecha</th>
-            <th>Concepto</th>
-            <th>Tipo</th>
-            <th>Cantidad</th>
-        </tr>
-        {% for mov in movs %}
-        <tr>
-            <td>{{mov.fecha}}</td>
-            <td>{{mov.concepto}}</td>
-            <td>{{mov.tipo}}</td>
-            <td>{{mov.cantidad}}</td>
-        </tr>
-        {% endfor %}
-    </table>
+        <table class="paper">
+            <tr>
+                <th class="titulo-tabla">Fecha</th>
+                <th class="titulo-tabla">Concepto</th>
+                <th class="titulo-tabla">Tipo</th>
+                <th class="titulo-tabla">Cantidad</th>
+            </tr>
+            {% for mov in movs %}
+            <tr>
+                <td>{{mov.fecha}}</td>
+                <td>{{mov.concepto}}</td>
+                <td>{{mov.tipo}}</td>
+                <td class="numero">{{mov.cantidad}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </main>
 
     <footer class="pie-de-pagina">2022 Bootcamp Cero.</footer>
 </body>
