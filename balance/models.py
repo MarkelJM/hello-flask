@@ -1,4 +1,5 @@
 import csv
+from datetime import date, datetime
 from . import FICHERO
 
 class Movimiento:
@@ -7,15 +8,17 @@ class Movimiento:
         self.concepto = concepto
         self.tipo = tipo
         self.cantidad = cantidad
-
+    
     
 
 class ListaMovimiento:
     def __init__(self) :
-        self.lista_movimiento = []
+        self.movimientos = []
 
     def leer_archivo (self):
         with open(FICHERO, "r", encoding="UTF-8") as fichero:
             reader = csv.DictReader(fichero)
             for linea  in reader:
-                self.lista_movimiento.append(linea)
+                mov = Movimiento(linea["fecha"], linea["concepto"], 
+                linea["tipo"], linea["cantidad"])
+                self.movimientos.append(mov)

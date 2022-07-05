@@ -28,14 +28,26 @@
                 <th class="titulo-tabla">Tipo</th>
                 <th class="titulo-tabla">Cantidad</th>
             </tr>
+            {% if movs %}
             {% for mov in movs %}
             <tr>
                 <td>{{mov.fecha}}</td>
                 <td>{{mov.concepto}}</td>
-                <td>{{mov.tipo}}</td>
+                <td>
+                    {% if mov.tipo == 'I' %}
+                    Ingreso
+                    {% else %}
+                    Gasto
+                    {% endif %}
+                </td>
                 <td class="numero">{{mov.cantidad}}</td>
             </tr>
             {% endfor %}
+            {% else %}
+            <tr>
+                <td colspan="4" class="lista-vacia">no hay movimientos</td>
+            </tr>
+            {% endif %}
         </table>
     </main>
 

@@ -43,3 +43,9 @@ table.paper {
     padding: 20px;
     border-top: solid 1px bisque;
 }
+
+.lista-vacia {
+    text-align: center;
+    padding: 20px;
+    color: blue;
+}
