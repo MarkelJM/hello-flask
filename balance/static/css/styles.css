@@ -1,0 +1,17 @@
+header {
+    background-color: #746879;
+    color: azure;
+    height: 50px;
+    font-size: large;
+    line-height: 50px;
+    padding-left: 25px;
+
+}
+
+nav {
+    background-color: rgb(155, 187, 103);
+    color: bisque;
+    height: 25px;
+    line-height: 25px;
+    padding-left: 25px;
+}

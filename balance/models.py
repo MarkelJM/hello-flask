@@ -15,7 +15,7 @@ class ListaMovimiento:
         self.lista_movimiento = []
 
     def leer_archivo (self):
-        with open(FICHERO, "r") as fichero:
+        with open(FICHERO, "r", encoding="UTF-8") as fichero:
             reader = csv.DictReader(fichero)
             for linea  in reader:
                 self.lista_movimiento.append(linea)
